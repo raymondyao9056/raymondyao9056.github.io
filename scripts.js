@@ -69,18 +69,16 @@ function autoScout() {
           // Selecting the input element and get its value 
        //   var giveName = document.getElementById("fname").value;
       var scouterName = document.getElementById("fname").value;
-      var competition = document.getElementById("competition").value;
       var allianceColor = document.getElementById("allianceColor").value;
       var allianceNumber = document.getElementById("allianceNumber").value;
 
 
-      var url = "https://docs.google.com/forms/d/e/1FAIpQLSfHjpqt4axhUYk2EFWeNPxkGLGrxeq47JX50rwIaNQ_Dz7Dnw/viewform?usp=pp_url";
+      var url = "https://docs.google.com/forms/d/e/1FAIpQLSeT-otIPqsJBNcnEmnJxlgjtbTE7KSrHJSPp4HPsNSpjZglrQ/viewform?usp=pp_url";
 
-      var nameURL = "&entry.1177301623=" + scouterName;
-      var competitionURL = "&entry.1443173845=" + competition;
-      var qualificationURL = "&entry.1802790063=";
-      var teamNumberURL = "&entry.594343725=";
-      var allianceColorURL = "&entry.1284261078=";
+      var nameURL = "&entry.1078451590=" + scouterName;
+      var qualificationURL = "&entry.2070881549=";
+      var teamNumberURL = "&entry.411679531=";
+      var allianceColorURL = "&entry.1788734238=";
 
       var finalURL;
       var output;
@@ -92,7 +90,7 @@ function autoScout() {
           if (allianceColor==='Blue') {
               teamNumber = teams[6*i - 6 + parseInt(allianceNumber) - 1 + 3];
           }
-          finalURL = url + nameURL + competitionURL + qualificationURL + "Q" + i + teamNumberURL + teamNumber + allianceColorURL + allianceColor;
+          finalURL = url + nameURL + qualificationURL + "Q" + i + teamNumberURL + teamNumber + allianceColorURL + allianceColor;
           document.getElementById(i).innerHTML = "\n" + "Q" + i + ": " + finalURL + "\n";            
       }
 
