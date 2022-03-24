@@ -91,7 +91,7 @@ function autoScout() {
               teamNumber = teams[6*i - 6 + parseInt(allianceNumber) - 1 + 3];
           }
           finalURL = url + nameURL + qualificationURL + "Q" + i + teamNumberURL + teamNumber + allianceColorURL + allianceColor;
-          document.getElementById(i).innerHTML = "\n" + "Q" + i + ": " + finalURL + "\n";            
+          document.getElementById(i).setAttribute("href", finalURL + "\n");
       }
 
             
